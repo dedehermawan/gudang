@@ -1,0 +1,13 @@
+<% $i = 1 %>
+  <% @units.each do |unit| %>
+  <tr>
+    <td><%= $i %></td>
+    <td><%= unit.unit_name %></td>
+    <td class="text-center">
+      <%= link_to 'Edit', edit_unit_path(unit), remote: true, class: 'btn btn-default' %>
+      <%= link_to "Delete", unit_delete_path(unit), remote: true, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+  <% $i += 1 %>
+<% end %>
+

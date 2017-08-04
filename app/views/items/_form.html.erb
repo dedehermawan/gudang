@@ -1,0 +1,47 @@
+<%= form_for @item, remote: true, html: {styles: "display:inline;"} do |f| %>
+  <div class="modal-body">
+    <ul class="errors"></ul>
+    <div class="row">
+      <div class="form-group col-md-6">
+        <%= f.label "Item category", class: 'control-label' %>
+        <%= f.select(:category_item, options_for_select([
+          ['Electric', 1],
+          ['Machine', 2], 
+          ['Utility', 3],
+          ['Workshop', 4]
+        ], [@item.category_item]),{prompt: '-- Select --'},{class: 'form-control'})  %>
+    </div>
+    <div class="form-group col-md-6">
+      <%= f.label "Type category", class: 'control-label' %>
+      <%= f.select(:category_usage, options_for_select([
+        ['Sparepart', 1],
+        ['Tool', 2], 
+      ], [@item.category_usage]),{prompt: '-- Select --'},{class: 'form-control'})  %>
+  </div>
+    </div>
+    <div class="form-group">
+      <%= f.label "Brand", class: 'control-label' %>
+      <div class="input-group">
+        <div id="isi_brand">
+          <% @brand_name = @item.new_record? ? @item.brand_id : @item.brand.brand_name %>
+          <%= f.text_field :brand_id, :value => @brand_name, class: 'form-control', disabled: true  %>
+        </div>
+        <span class="input-group-btn">
+          <%= link_to brands_items_path, remote: true, :class => 'btn btn-primary' do %>
+            <span class="glyphicon glyphicon-search" ></span>
+          <% end %>
+        </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :item_name, class: 'control-label' %>
+      <%= f.text_field :item_name, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Unit", class: 'control-label' %>
+      <%= f.select(:unit_id,options_for_select(@unit.collect{ |unit| [unit.unit_name, unit.id]}, [@item.unit_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
+    </div>
+    <div class="modal-footer">
+      <%= f.submit @item.new_record? ? "Create Item":"Update Item", class: "btn btn-primary" %>
+    </div>
+  <% end %>

@@ -1,0 +1,13 @@
+<% $i = 1 %>
+  <% @warehouses.each do |warehouse| %>
+  <tr>
+    <td><%= $i %></td>
+    <td><%= warehouse.warehouse_name %></td>
+    <td class="text-center">
+      <%= link_to 'Edit', edit_warehouse_path(warehouse), remote: true, class: 'btn btn-default' %>
+      <%= link_to "Delete", warehouse_delete_path(warehouse), remote: true, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+  <% $i += 1 %>
+<% end %>
+

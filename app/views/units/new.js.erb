@@ -1,0 +1,5 @@
+$("#unit-modal").html("<%= escape_javascript(render 'new') %>")
+$("#unit-modal").modal("show")
+$('#unit-modal').on('shown.bs.modal', function () {
+  $('.first-input').focus()
+})

@@ -1,0 +1,15 @@
+<% $i = 1 %>
+<% @brands.each do |brand| %>
+  <tr>
+    <td><%= $i %></td>
+    <td><%= brand.brand_name %></td>
+    <td class="text-center">
+      <%= link_to "#",remote: true, :onclick=>"destroyJsFunction('#{brand.id}','#{brand.brand_name}')", :class => "btn btn-success" do %>
+        <span class="glyphicon glyphicon-ok"></span>
+      <% end %>
+    </td>
+  </tr>
+  <% $i += 1 %>
+<% end %>
+
+

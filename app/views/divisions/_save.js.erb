@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @division.errors.any? %>
+  <% @division.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".division-index").html("<%= j (render 'index') %>")
+  $("#division-modal").modal("hide")
+<% end %>

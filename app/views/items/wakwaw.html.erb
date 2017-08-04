@@ -1,0 +1,55 @@
+<%
+    params[:page].present? ? $i = (params[:page].to_i-1) * @per_page : $i = 0
+  %>
+<script type="text/javascript">
+$(document).ready(function(){
+  listLoad(1);
+});
+
+function listLoad(page){
+  $.ajax({
+    url:'items/'+page+'/page',
+    <% link_to "brands", brands_items_path, remote: true %>
+      type:'POST',
+      dataType:'json',
+      data:{
+        row_per_page:$('#row_per_page').val()
+      },
+      success:function(data){
+        $("#item").html("<%= j (render 'page') %>")
+      },
+      error:function(data){
+        alert("no");
+      }
+  });
+}
+
+</script>
+
+<div class="container">
+  <div class="col-md-1">
+    <%= link_to "New Item", new_item_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="col-md-1">
+    <select class="form-control" id="row_per_page" onchange="listLoad(1)">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+    </select>
+  </div>
+  <div class="col-md-3 col-md-offset-9 input-group">
+    <input type="text" class="form-control">
+    <span class="input-group-btn">
+      <%= link_to brands_items_path, remote: true, :class => 'btn btn-primary' do %>
+        <span class="glyphicon glyphicon-search" ></span>
+      <% end %>
+    </span>
+  </div>
+  <div id="item">
+  </div>
+</div>
+<div id="item-modal" class="modal fade"></div>
+
+
+<div id="itembrands-modal" class="modal fade"></div>

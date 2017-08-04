@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="well">
+    <%= link_to "New Warehouse", new_warehouse_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-warehouses"></div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>No.</td>
+        <td>Warehouse Name</td>
+        <td colspan="2" class="text-center">Action</td>
+      </tr>
+    </thead>
+    <tbody class="warehouse-index">
+      <%= render 'index' %>
+    </tbody>
+  </table>
+</div>
+<div id="warehouse-modal" class="modal fade"></div>
+
+
+

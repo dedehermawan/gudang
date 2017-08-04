@@ -1,0 +1,9 @@
+$("#itembrands-modal").html("<%= j (render 'brands') %>")
+$("#itembrands-modal").modal("show")
+
+function destroyJsFunction(id, name){
+  //  alert (id)
+  $('#isi_brand').html("<input type='hidden' value="+id+" name='item[brand_id]'><input type='text' value="+name+" class='form-control' disabled>")
+    $("#itembrands-modal").modal("hide")
+}
+

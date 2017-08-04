@@ -1,0 +1,39 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Item ID</td>
+      <td>Item Name</td>
+      <td>Brand</td>
+      <td>Unit</td>
+      <td>Type Category</td>
+      <td>Item Category</td>
+      <td colspan="2" class="text-center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+    <%
+        params[:page].present? ? $i = (params[:page].to_i-1) * @per_page : $i = 0
+    $i += 1
+    @item_category = ["Electric", "Machine", "Utility", "Workshop"] 
+    @usage_category = ["Sparepart", "Tool"] 
+  %>
+<% @items.each do |item| %>
+  <tr>
+    <td><%= $i %></td>
+    <td><%= item.item_id %></td>
+    <td><%= item.item_name %></td>
+    <td><%= item.brand.brand_name %></td>
+    <td><%= item.unit.unit_name %></td>
+    <td><%= @usage_category[item.category_usage - 1]%></td>
+    <td><%= @item_category[item.category_item - 1]%></td>
+    <td class="text-center">
+      <%= link_to 'Edit', edit_item_path(item), remote: true, class: 'btn btn-default' %>
+      <%= link_to "Delete", item_delete_path(item), remote: true, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+  <% $i += 1 %>
+<% end %>
+  </tbody>
+</table>
+<span class="pull-right"><%= will_paginate @items %></span>

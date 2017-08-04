@@ -1,0 +1,5 @@
+$("#warehouse-modal").html("<%= escape_javascript(render 'new') %>")
+$("#warehouse-modal").modal("show")
+$('#warehouse-modal').on('shown.bs.modal', function () {
+  $('.first-input').focus()
+})

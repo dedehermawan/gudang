@@ -6,37 +6,26 @@
   <div class="col-md-1">
     <%= link_to "New Item", new_item_path, remote: true, class: "btn btn-primary" %>
   </div>
-  <div class="col-md-1">
-    <select class="form-control" id="row_per_page" onchange="listLoad(1)">
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="25">25</option>
-      <option value="50">50</option>
-    </select>
+  <div class="col-md-2 col-md-offset-3 loading">
+    <%= image_tag "loading.gif" %>
+  </div>
+  <%= form_tag items_path, :method => 'get', :id => "search" do %>
+    <div class="col-md-1">
+      <%= select_tag(
+        :limit,
+        options_for_select([['5',5],['10',10],['25',25],['50',50]]),
+        {class: 'form-control'}
+      ) %>
   </div>
   <div class="col-md-3 col-md-offset-9 input-group">
-    <input type="text" class="form-control">
-    <span class="input-group-btn">
-      <%= link_to brands_items_path, remote: true, :class => 'btn btn-primary' do %>
-        <span class="glyphicon glyphicon-search" ></span>
-      <% end %>
-    </span>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Item id / item name' %>
+    <% submit_tag "Search", :name => nil, class: 'btn btn-primary' %>
   </div>
-  <div id="item">
-    <% render 'page' %>
-  </div>
+<% end %>
+<div id="items">
+  <%= render 'items' %>
+</div>
 </div>
 <div id="item-modal" class="modal fade"></div>
 
-
 <div id="itembrands-modal" class="modal fade"></div>
-
-<script>
-$(document).ready(function(){
-  loadList();
-});
-
-function loadList(){
-  alert("tes");
-};
-</script>

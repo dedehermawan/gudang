@@ -4,7 +4,8 @@ $("ul.errors").html("")
     $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
   <% end %>
 <% else %>
-  $("#item").html("<%= j (render 'index') %>")
+  $('.loading').hide();
+  $("#items").html("<%= j (render 'items') %>")
   $("#item-modal").modal("hide")
 <% end %>
 

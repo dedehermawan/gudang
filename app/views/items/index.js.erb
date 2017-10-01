@@ -1,5 +1,2 @@
-
-function listLoad(page){
-  alert("tes");
-}
-
+$("#items").html("<%= escape_javascript(render("items")) %>")
+$('.loading').hide();

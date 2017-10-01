@@ -4,21 +4,12 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :destroy]
 
   def all_order
-    #sleep 1
-    @per_page = params[:row_per_page] 
-    @items = Item.paginate(:per_page => @per_page, :page => params[:page]).order(item_id: :asc)
+    sleep 0.5 
+    @per_page = params[:limit].present? ? params[:limit].to_i : 5
+    @items = Item.search(params[:search]).paginate(:per_page => @per_page, :page => params[:page]).order(item_id: :asc)
   end
 
   def index
-    respond_to do |format|
-      format.html
-      format.js
-    end
-  end
-
-  def page
-    @row_per_page = params[:row_per_page]
-    @items = Item.paginate(:per_page => @row_per_page, :page => params[:page]).order(item_id: :asc)
   end
 
   def new

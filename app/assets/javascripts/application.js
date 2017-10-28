@@ -15,6 +15,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require moment
+//= require bootstrap-datetimepicker
 
 $(document).on('turbolinks:load', function() {
   $(".loading").hide();

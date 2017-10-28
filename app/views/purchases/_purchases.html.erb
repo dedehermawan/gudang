@@ -1,0 +1,26 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <td>No.</td>
+      <td>Purchase No</td>
+      <td>Date of Document</td>
+      <td>Date of Used</td>
+      <td>Status</td>
+      <td colspan="2" class="text-center">Action</td>
+    </tr>
+  </thead>
+  <tbody>
+<% @purchases.each do |purchase| %>
+  <tr>
+    <td><%= $i %></td>
+    <td><%= purchase.purchase_id %></td>
+    <td class="text-center">
+      <%= link_to 'Edit', edit_purchase_path(purchase), remote: true, class: 'btn btn-default' %>
+      <%= link_to "Delete", purchase_delete_path(purchase), remote: true, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+  <% $i += 1 %>
+<% end %>
+  </tbody>
+</table>
+<span class="pull-right"><%= will_paginate @purchases %></span>

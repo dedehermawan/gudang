@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170711035330) do
+ActiveRecord::Schema.define(version: 20171012082313) do
 
   create_table "brands", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "brand_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "coas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "coa_id"
+    t.string   "coa_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,13 +36,34 @@ ActiveRecord::Schema.define(version: 20170711035330) do
     t.string   "item_name"
     t.integer  "brand_id"
     t.integer  "unit_id"
-    t.boolean  "active"
+    t.boolean  "active",         default: true
     t.integer  "category_usage"
     t.integer  "category_item"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
     t.index ["unit_id"], name: "index_items_on_unit_id", using: :btree
+  end
+
+  create_table "purchases", primary_key: "purchase_id", id: :string, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "supplier_id"
+    t.boolean  "active"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "coa_id"
+    t.integer  "division_id"
+    t.date     "document_date"
+    t.date     "use_date"
+    t.index ["coa_id"], name: "index_purchases_on_coa_id", using: :btree
+    t.index ["division_id"], name: "index_purchases_on_division_id", using: :btree
+    t.index ["supplier_id"], name: "index_purchases_on_supplier_id", using: :btree
+  end
+
+  create_table "suppliers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "supplier_name"
+    t.boolean  "active"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -62,4 +90,7 @@ ActiveRecord::Schema.define(version: 20170711035330) do
 
   add_foreign_key "items", "brands"
   add_foreign_key "items", "units"
+  add_foreign_key "purchases", "coas"
+  add_foreign_key "purchases", "divisions"
+  add_foreign_key "purchases", "suppliers"
 end

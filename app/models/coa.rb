@@ -1,0 +1,2 @@
+class Coa < ApplicationRecord
+end

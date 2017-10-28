@@ -1,10 +1,32 @@
+<%
+    params[:page].present? ? $i = (params[:page].to_i-1) * @per_page : $i = 0
+  %>
 
-<script>
-$(function(){
-loadList();
-});
+<div class="container">
+  <div class="col-md-1">
+    <%= link_to "New Purchase", new_purchase_path, class: "btn btn-primary" %>
+  </div>
+  <div class="col-md-2 col-md-offset-3 loading">
+    <%= image_tag "loading.gif" %>
+  </div>
+  <%= form_tag purchases_path, :method => 'get', :id => "search" do %>
+    <div class="col-md-1">
+      <%= select_tag(
+        :limit,
+        options_for_select([['5',5],['10',10],['25',25],['50',50]]),
+        {class: 'form-control'}
+      ) %>
+  </div>
+  <div class="col-md-3 col-md-offset-9 input-group">
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Item id / purchase name' %>
+    <% submit_tag "Search", :name => nil, class: 'btn btn-primary' %>
+  </div>
+<% end %>
+<div id="purchases">
+  <%= render 'purchases' %>
+</div>
+</div>
+<div id="purchase-modal" class="modal fade"></div>
 
-function loadList(){
-  alert("tes");
-};
-</script>
+<div id="purchasebrands-modal" class="modal fade"></div>
+

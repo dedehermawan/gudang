@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   
-  get 'purchases/index'
-
   get 'sessions/new'
 
   root    'dashboards#index'
@@ -12,13 +10,15 @@ Rails.application.routes.draw do
   post    '/login',   to: 'sessions#create'
   delete  '/logout',  to: 'sessions#destroy'
 
-  resources :users, :purchases
+  resources :users
   resources :dashboards
   resources :items do
       get "brands", on: :collection
       get "delete"
       post "page"
   end
+  
+  resources :purchases
 
   resources :divisions, :brands, :warehouses, :units do
     get "delete"

@@ -1,12 +1,35 @@
-<h2>Add Purchase</h2>
-<%= form_for @purchase, html: {styles: "display:inline;"} do |f| %>
-  <div class="form-group">
+<%= form_for(@purchase) do |f| %>
+  <% if @purchase.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purchase.errors.count, "error") %> prohibited this @purchase from being saved:</h2>
+      <ul>
+        <% @purchase.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3>Head</h3>
+  <div class="form-group col-sm-2">
     <%= f.label "coa", class: 'control-label' %>
-    <%= f.select(:coa_id, options_for_select([
-      ['Electric', 1],
-      ['Machine', 2], 
-      ['Utility', 3],
-      ['Workshop', 4]
-    ], [@purchase.coa_id]),{prompt: '-- Select --'},{class: 'form-control'})  %>
+    <%= f.select(:coa_id,options_for_select(@coas.collect{ |coa| [coa.coa_name, coa.id]}, [@purchase.coa_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
+  </div>
+
+  <div class="form-group col-sm-2">
+    <%= f.label "supplier", class: 'control-label' %>
+    <%= f.select(:supplier_id,options_for_select(@coas.collect{ |coa| [coa.coa_name, coa.id]}, [@purchase.coa_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
+  </div>
+
+  <h2>details</h2>
+  <div class="field">
+    <%= f.fields_for :purchase_details do |ff| %>
+      <%= ff.label :qty_purchase %> 
+      <%= ff.text_field :qty_purchase %> 
+  </div>
+<% end %>
+
+<div class="actions">
+  <%= f.submit %>
 </div>
 <% end %>

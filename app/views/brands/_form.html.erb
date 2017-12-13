@@ -10,7 +10,7 @@
   <div class="modal-footer">
     <!--button type="button" class="btn btn-default" data-dismiss="modal">Close</button-->
     <!--button type="submit" class="btn btn-primary"><%= yield(:button_text) %></button-->
-    <%= f.submit @brand.new_record? ? "Create Brand":"Update Brand", class: "btn btn-primary" %>
+    <%= f.submit @brand.new_record? ? "Create Brand":"Update Brand", class: "btn btn-primary", data: {"disable-with": "saving...."} %>
   </div>
 <% end %>
 

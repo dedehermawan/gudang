@@ -1,0 +1,8 @@
+<h2>Add Purchase</h2>
+<%= form_for @purchase, html: {styles: "display:inline;"} do |f| %>
+  <%= f.text_field :purchase_id %>
+  <%= f.fields_for :purchase_details do |ff| %>
+    <%= ff.text_field :qty_purchase %>
+  <% end %>
+  <%= f.submit %>
+<% end %>

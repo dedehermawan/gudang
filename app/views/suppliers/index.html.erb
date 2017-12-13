@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="well">
+    <%= link_to "New Supplier", new_supplier_path, remote: true, class: "btn btn-primary" %>
+  </div>
+  <div class="new-suppliers"></div>
+
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>No.</td>
+        <td>Supplier Name</td>
+        <td colspan="2" class="text-center">Action</td>
+      </tr>
+    </thead>
+    <tbody class="supplier-index">
+      <%= render 'index' %>
+    </tbody>
+  </table>
+</div>
+<div id="supplier-modal" class="modal fade"></div>
+
+
+

@@ -1,0 +1,5 @@
+$("#coa-modal").html("<%= escape_javascript(render 'new') %>")
+$("#coa-modal").modal("show")
+$('#coa-modal').on('shown.bs.modal', function () {
+  $('.first-input').focus()
+})

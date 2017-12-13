@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @coa.errors.any? %>
+  <% @coa.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".coa-index").html("<%= j (render 'index') %>")
+  $("#coa-modal").modal("hide")
+<% end %>

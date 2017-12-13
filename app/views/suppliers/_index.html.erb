@@ -1,0 +1,13 @@
+<% $i = 1 %>
+  <% @suppliers.each do |supplier| %>
+  <tr>
+    <td><%= $i %></td>
+    <td><%= supplier.supplier_name %></td>
+    <td class="text-center">
+      <%= link_to 'Edit', edit_supplier_path(supplier), remote: true, class: 'btn btn-default' %>
+      <%= link_to "Delete", supplier_delete_path(supplier), remote: true, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+  <% $i += 1 %>
+<% end %>
+

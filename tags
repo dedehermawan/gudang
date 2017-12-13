@@ -1,0 +1,197 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
+AddColumnsToPurchase	db/migrate/20171012082313_add_columns_to_purchase.rb	/^class AddColumnsToPurchase < ActiveRecord::Migration[5.0]$/;"	c
+AddIndexToUsersUsername	db/migrate/20170512170828_add_index_to_users_username.rb	/^class AddIndexToUsersUsername < ActiveRecord::Migration[5.0]$/;"	c
+AddPasswordDigestToUsers	db/migrate/20170512171217_add_password_digest_to_users.rb	/^class AddPasswordDigestToUsers < ActiveRecord::Migration[5.0]$/;"	c
+AddPurchaseIdToPurchaseDetail	db/migrate/20171105051800_add_purchase_id_to_purchase_detail.rb	/^class AddPurchaseIdToPurchaseDetail < ActiveRecord::Migration[5.0]$/;"	c
+AddRememberDigestToUsers	db/migrate/20170530132022_add_remember_digest_to_users.rb	/^class AddRememberDigestToUsers < ActiveRecord::Migration[5.0]$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Auth
+ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
+ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
+ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
+ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
+Auth	config/application.rb	/^module Auth$/;"	m
+Brand	app/models/brand.rb	/^class Brand < ApplicationRecord$/;"	c
+BrandTest	test/models/brand_test.rb	/^class BrandTest < ActiveSupport::TestCase$/;"	c
+BrandsController	app/controllers/brands_controller.rb	/^class BrandsController < ApplicationController$/;"	c
+BrandsControllerTest	test/controllers/brands_controller_test.rb	/^class BrandsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+BrandsHelper	app/helpers/brands_helper.rb	/^module BrandsHelper$/;"	m
+Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
+Coa	app/models/coa.rb	/^class Coa < ApplicationRecord$/;"	c
+CoaTest	test/models/coa_test.rb	/^class CoaTest < ActiveSupport::TestCase$/;"	c
+CoasController	app/controllers/coas_controller.rb	/^class CoasController < ApplicationController$/;"	c
+Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+CreateBrands	db/migrate/20170710040209_create_brands.rb	/^class CreateBrands < ActiveRecord::Migration[5.0]$/;"	c
+CreateCoas	db/migrate/20171012081639_create_coas.rb	/^class CreateCoas < ActiveRecord::Migration[5.0]$/;"	c
+CreateDivisions	db/migrate/20170621125751_create_divisions.rb	/^class CreateDivisions < ActiveRecord::Migration[5.0]$/;"	c
+CreateItems	db/migrate/20170710091705_create_items.rb	/^class CreateItems < ActiveRecord::Migration[5.0]$/;"	c
+CreatePurchaseDetails	db/migrate/20171105051606_create_purchase_details.rb	/^class CreatePurchaseDetails < ActiveRecord::Migration[5.0]$/;"	c
+CreatePurchases	db/migrate/20171001040111_create_purchases.rb	/^class CreatePurchases < ActiveRecord::Migration[5.0]$/;"	c
+CreateSuppliers	db/migrate/20171001034026_create_suppliers.rb	/^class CreateSuppliers < ActiveRecord::Migration[5.0]$/;"	c
+CreateUnits	db/migrate/20170710091046_create_units.rb	/^class CreateUnits < ActiveRecord::Migration[5.0]$/;"	c
+CreateUsers	db/migrate/20170512164023_create_users.rb	/^class CreateUsers < ActiveRecord::Migration[5.0]$/;"	c
+CreateWarehouses	db/migrate/20170711035330_create_warehouses.rb	/^class CreateWarehouses < ActiveRecord::Migration[5.0]$/;"	c
+DashboardsController	app/controllers/dashboards_controller.rb	/^class DashboardsController < ApplicationController$/;"	c
+DashboardsControllerTest	test/controllers/dashboards_controller_test.rb	/^class DashboardsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+DashboardsHelper	app/helpers/dashboards_helper.rb	/^module DashboardsHelper$/;"	m
+Division	app/models/division.rb	/^class Division < ApplicationRecord$/;"	c
+DivisionTest	test/models/division_test.rb	/^class DivisionTest < ActiveSupport::TestCase$/;"	c
+DivisionsController	app/controllers/divisions_controller.rb	/^class DivisionsController < ApplicationController$/;"	c
+DivisionsControllerTest	test/controllers/divisions_controller_test.rb	/^class DivisionsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+DivisionsHelper	app/helpers/divisions_helper.rb	/^module DivisionsHelper$/;"	m
+Item	app/models/item.rb	/^class Item < ApplicationRecord$/;"	c
+ItemTest	test/models/item_test.rb	/^class ItemTest < ActiveSupport::TestCase$/;"	c
+ItemsController	app/controllers/items_controller.rb	/^class ItemsController < ApplicationController$/;"	c
+ItemsControllerTest	test/controllers/items_controller_test.rb	/^class ItemsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+ItemsHelper	app/helpers/items_helper.rb	/^module ItemsHelper$/;"	m
+Purchase	app/models/purchase.rb	/^class Purchase < ApplicationRecord$/;"	c
+PurchaseDetail	app/models/purchase_detail.rb	/^class PurchaseDetail < ApplicationRecord$/;"	c
+PurchaseDetailTest	test/models/purchase_detail_test.rb	/^class PurchaseDetailTest < ActiveSupport::TestCase$/;"	c
+PurchaseTest	test/models/purchase_test.rb	/^class PurchaseTest < ActiveSupport::TestCase$/;"	c
+PurchasesController	app/controllers/purchases_controller.rb	/^class PurchasesController < ApplicationController$/;"	c
+PurchasesControllerTest	test/controllers/purchases_controller_test.rb	/^class PurchasesControllerTest < ActionDispatch::IntegrationTest$/;"	c
+PurchasesHelper	app/helpers/purchases_helper.rb	/^module PurchasesHelper$/;"	m
+SessionsController	app/controllers/sessions_controller.rb	/^class SessionsController < ApplicationController$/;"	c
+SessionsControllerTest	test/controllers/sessions_controller_test.rb	/^class SessionsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+SessionsHelper	app/helpers/sessions_helper.rb	/^module SessionsHelper$/;"	m
+Supplier	app/models/supplier.rb	/^class Supplier < ApplicationRecord$/;"	c
+SupplierTest	test/models/supplier_test.rb	/^class SupplierTest < ActiveSupport::TestCase$/;"	c
+Unit	app/models/unit.rb	/^class Unit < ApplicationRecord$/;"	c
+UnitTest	test/models/unit_test.rb	/^class UnitTest < ActiveSupport::TestCase$/;"	c
+UnitsController	app/controllers/units_controller.rb	/^class UnitsController < ApplicationController$/;"	c
+UnitsControllerTest	test/controllers/units_controller_test.rb	/^class UnitsControllerTest < ActionDispatch::IntegrationTest$/;"	c
+UnitsHelper	app/helpers/units_helper.rb	/^module UnitsHelper$/;"	m
+User	app/models/user.rb	/^class User < ApplicationRecord$/;"	c
+UserTest	test/models/user_test.rb	/^class UserTest < ActiveSupport::TestCase$/;"	c
+UsersController	app/controllers/users_controller.rb	/^class UsersController < ApplicationController$/;"	c
+UsersControllerTest	test/controllers/users_controller_test.rb	/^class UsersControllerTest < ActionDispatch::IntegrationTest$/;"	c
+UsersHelper	app/helpers/users_helper.rb	/^module UsersHelper$/;"	m
+Warehouse	app/models/warehouse.rb	/^class Warehouse < ApplicationRecord$/;"	c
+WarehouseTest	test/models/warehouse_test.rb	/^class WarehouseTest < ActiveSupport::TestCase$/;"	c
+WarehousesController	app/controllers/warehouses_controller.rb	/^class WarehousesController < ApplicationController$/;"	c
+WarehousesControllerTest	test/controllers/warehouses_controller_test.rb	/^class WarehousesControllerTest < ActionDispatch::IntegrationTest$/;"	c
+WarehousesHelper	app/helpers/warehouses_helper.rb	/^module WarehousesHelper$/;"	m
+add	app/controllers/purchases_controller.rb	/^  def add$/;"	f	class:PurchasesController
+all_order	app/controllers/brands_controller.rb	/^  def all_order$/;"	f	class:BrandsController
+all_order	app/controllers/coas_controller.rb	/^  def all_order$/;"	f	class:CoasController
+all_order	app/controllers/divisions_controller.rb	/^  def all_order$/;"	f	class:DivisionsController
+all_order	app/controllers/items_controller.rb	/^  def all_order$/;"	f	class:ItemsController
+all_order	app/controllers/purchases_controller.rb	/^  def all_order$/;"	f	class:PurchasesController
+authenticated?	app/models/user.rb	/^  def authenticated?(remember_token)$/;"	f	class:User
+auto_number	app/controllers/items_controller.rb	/^  def auto_number(category_item)$/;"	f	class:ItemsController
+brand_params	app/controllers/brands_controller.rb	/^  def brand_params$/;"	f	class:BrandsController
+brands	app/controllers/items_controller.rb	/^  def brands$/;"	f	class:ItemsController
+change	db/migrate/20170512164023_create_users.rb	/^  def change$/;"	f	class:CreateUsers
+change	db/migrate/20170512170828_add_index_to_users_username.rb	/^  def change$/;"	f	class:AddIndexToUsersUsername
+change	db/migrate/20170512171217_add_password_digest_to_users.rb	/^  def change$/;"	f	class:AddPasswordDigestToUsers
+change	db/migrate/20170530132022_add_remember_digest_to_users.rb	/^  def change$/;"	f	class:AddRememberDigestToUsers
+change	db/migrate/20170621125751_create_divisions.rb	/^  def change$/;"	f	class:CreateDivisions
+change	db/migrate/20170710040209_create_brands.rb	/^  def change$/;"	f	class:CreateBrands
+change	db/migrate/20170710091046_create_units.rb	/^  def change$/;"	f	class:CreateUnits
+change	db/migrate/20170710091705_create_items.rb	/^  def change$/;"	f	class:CreateItems
+change	db/migrate/20170711035330_create_warehouses.rb	/^  def change$/;"	f	class:CreateWarehouses
+change	db/migrate/20171001034026_create_suppliers.rb	/^  def change$/;"	f	class:CreateSuppliers
+change	db/migrate/20171001040111_create_purchases.rb	/^  def change$/;"	f	class:CreatePurchases
+change	db/migrate/20171012081639_create_coas.rb	/^  def change$/;"	f	class:CreateCoas
+change	db/migrate/20171012082313_add_columns_to_purchase.rb	/^  def change$/;"	f	class:AddColumnsToPurchase
+change	db/migrate/20171105051606_create_purchase_details.rb	/^  def change$/;"	f	class:CreatePurchaseDetails
+change	db/migrate/20171105051800_add_purchase_id_to_purchase_detail.rb	/^  def change$/;"	f	class:AddPurchaseIdToPurchaseDetail
+coa_params	app/controllers/coas_controller.rb	/^  def coa_params$/;"	f	class:CoasController
+correct_user	app/controllers/application_controller.rb	/^  def correct_user$/;"	f	class:ApplicationController
+create	app/controllers/brands_controller.rb	/^  def create$/;"	f	class:BrandsController
+create	app/controllers/coas_controller.rb	/^  def create$/;"	f	class:CoasController
+create	app/controllers/divisions_controller.rb	/^  def create$/;"	f	class:DivisionsController
+create	app/controllers/items_controller.rb	/^  def create$/;"	f	class:ItemsController
+create	app/controllers/purchases_controller.rb	/^  def create$/;"	f	class:PurchasesController
+create	app/controllers/sessions_controller.rb	/^  def create$/;"	f	class:SessionsController
+create	app/controllers/units_controller.rb	/^  def create$/;"	f	class:UnitsController
+create	app/controllers/users_controller.rb	/^  def create$/;"	f	class:UsersController
+create	app/controllers/warehouses_controller.rb	/^  def create$/;"	f	class:WarehousesController
+current_user	app/helpers/sessions_helper.rb	/^  def current_user$/;"	f	class:SessionsHelper
+current_user?	app/helpers/sessions_helper.rb	/^  def current_user?(user)$/;"	f	class:SessionsHelper
+delete	app/controllers/brands_controller.rb	/^  def delete$/;"	f	class:BrandsController
+delete	app/controllers/coas_controller.rb	/^  def delete$/;"	f	class:CoasController
+delete	app/controllers/divisions_controller.rb	/^  def delete$/;"	f	class:DivisionsController
+delete	app/controllers/items_controller.rb	/^  def delete$/;"	f	class:ItemsController
+delete	app/controllers/units_controller.rb	/^  def delete$/;"	f	class:UnitsController
+delete	app/controllers/warehouses_controller.rb	/^  def delete$/;"	f	class:WarehousesController
+destroy	app/controllers/brands_controller.rb	/^  def destroy$/;"	f	class:BrandsController
+destroy	app/controllers/coas_controller.rb	/^  def destroy$/;"	f	class:CoasController
+destroy	app/controllers/divisions_controller.rb	/^  def destroy$/;"	f	class:DivisionsController
+destroy	app/controllers/items_controller.rb	/^  def destroy$/;"	f	class:ItemsController
+destroy	app/controllers/sessions_controller.rb	/^  def destroy$/;"	f	class:SessionsController
+destroy	app/controllers/units_controller.rb	/^  def destroy$/;"	f	class:UnitsController
+destroy	app/controllers/warehouses_controller.rb	/^  def destroy$/;"	f	class:WarehousesController
+digest	app/models/user.rb	/^  def User.digest(string)$/;"	F	class:User
+division_params	app/controllers/divisions_controller.rb	/^  def division_params$/;"	f	class:DivisionsController
+edit	app/controllers/brands_controller.rb	/^  def edit$/;"	f	class:BrandsController
+edit	app/controllers/coas_controller.rb	/^  def edit$/;"	f	class:CoasController
+edit	app/controllers/divisions_controller.rb	/^  def edit$/;"	f	class:DivisionsController
+edit	app/controllers/items_controller.rb	/^  def edit$/;"	f	class:ItemsController
+edit	app/controllers/units_controller.rb	/^  def edit$/;"	f	class:UnitsController
+edit	app/controllers/users_controller.rb	/^  def edit$/;"	f	class:UsersController
+edit	app/controllers/warehouses_controller.rb	/^  def edit$/;"	f	class:WarehousesController
+forget	app/helpers/sessions_helper.rb	/^  def forget(user)$/;"	f	class:SessionsHelper
+forget	app/models/user.rb	/^  def forget$/;"	f	class:User
+full_title	app/helpers/application_helper.rb	/^  def full_title(page_title = '')$/;"	f	class:ApplicationHelper
+index	app/controllers/brands_controller.rb	/^  def index$/;"	f	class:BrandsController
+index	app/controllers/coas_controller.rb	/^  def index$/;"	f	class:CoasController
+index	app/controllers/dashboards_controller.rb	/^  def index$/;"	f	class:DashboardsController
+index	app/controllers/divisions_controller.rb	/^  def index$/;"	f	class:DivisionsController
+index	app/controllers/items_controller.rb	/^  def index$/;"	f	class:ItemsController
+index	app/controllers/purchases_controller.rb	/^  def index$/;"	f	class:PurchasesController
+index	app/controllers/units_controller.rb	/^  def index$/;"	f	class:UnitsController
+index	app/controllers/warehouses_controller.rb	/^  def index$/;"	f	class:WarehousesController
+item_params	app/controllers/items_controller.rb	/^  def item_params$/;"	f	class:ItemsController
+log_in	app/helpers/sessions_helper.rb	/^  def log_in(user)$/;"	f	class:SessionsHelper
+log_out	app/helpers/sessions_helper.rb	/^  def log_out$/;"	f	class:SessionsHelper
+logged_in?	app/helpers/sessions_helper.rb	/^  def logged_in?$/;"	f	class:SessionsHelper
+logged_in_user	app/controllers/application_controller.rb	/^  def logged_in_user$/;"	f	class:ApplicationController
+new	app/controllers/brands_controller.rb	/^  def new$/;"	f	class:BrandsController
+new	app/controllers/coas_controller.rb	/^  def new$/;"	f	class:CoasController
+new	app/controllers/divisions_controller.rb	/^  def new$/;"	f	class:DivisionsController
+new	app/controllers/items_controller.rb	/^  def new$/;"	f	class:ItemsController
+new	app/controllers/purchases_controller.rb	/^  def new$/;"	f	class:PurchasesController
+new	app/controllers/sessions_controller.rb	/^  def new$/;"	f	class:SessionsController
+new	app/controllers/units_controller.rb	/^  def new$/;"	f	class:UnitsController
+new	app/controllers/users_controller.rb	/^  def new$/;"	f	class:UsersController
+new	app/controllers/warehouses_controller.rb	/^  def new$/;"	f	class:WarehousesController
+new_token	app/models/user.rb	/^  def User.new_token$/;"	F	class:User
+not_logged_in_user	app/controllers/application_controller.rb	/^  def not_logged_in_user$/;"	f	class:ApplicationController
+purchase_params	app/controllers/purchases_controller.rb	/^  def purchase_params$/;"	f	class:PurchasesController
+redirect_back_or	app/helpers/sessions_helper.rb	/^  def redirect_back_or(default)$/;"	f	class:SessionsHelper
+remember	app/helpers/sessions_helper.rb	/^  def remember(user)$/;"	f	class:SessionsHelper
+remember	app/models/user.rb	/^  def remember$/;"	f	class:User
+search	app/models/item.rb	/^  def self.search(search)$/;"	F	class:Item
+search	app/models/purchase.rb	/^  def self.search(search)$/;"	F	class:Purchase
+set_brand	app/controllers/brands_controller.rb	/^  def set_brand$/;"	f	class:BrandsController
+set_coa	app/controllers/coas_controller.rb	/^  def set_coa$/;"	f	class:CoasController
+set_division	app/controllers/divisions_controller.rb	/^  def set_division$/;"	f	class:DivisionsController
+set_item	app/controllers/items_controller.rb	/^  def set_item$/;"	f	class:ItemsController
+show	app/controllers/coas_controller.rb	/^  def show$/;"	f	class:CoasController
+show	app/controllers/dashboards_controller.rb	/^  def show$/;"	f	class:DashboardsController
+show	app/controllers/divisions_controller.rb	/^  def show$/;"	f	class:DivisionsController
+show	app/controllers/items_controller.rb	/^  def show$/;"	f	class:ItemsController
+show	app/controllers/purchases_controller.rb	/^  def show$/;"	f	class:PurchasesController
+show	app/controllers/users_controller.rb	/^  def show$/;"	f	class:UsersController
+store_location	app/helpers/sessions_helper.rb	/^  def store_location$/;"	f	class:SessionsHelper
+system!	bin/setup	/^def system!(*args)$/;"	f
+system!	bin/update	/^def system!(*args)$/;"	f
+unit_params	app/controllers/units_controller.rb	/^  def unit_params$/;"	f	class:UnitsController
+update	app/controllers/brands_controller.rb	/^  def update$/;"	f	class:BrandsController
+update	app/controllers/coas_controller.rb	/^  def update$/;"	f	class:CoasController
+update	app/controllers/divisions_controller.rb	/^  def update$/;"	f	class:DivisionsController
+update	app/controllers/items_controller.rb	/^  def update$/;"	f	class:ItemsController
+update	app/controllers/units_controller.rb	/^  def update$/;"	f	class:UnitsController
+update	app/controllers/users_controller.rb	/^  def update$/;"	f	class:UsersController
+update	app/controllers/warehouses_controller.rb	/^  def update$/;"	f	class:WarehousesController
+user_params	app/controllers/users_controller.rb	/^  def user_params$/;"	f	class:UsersController
+warehouse_params	app/controllers/warehouses_controller.rb	/^  def warehouse_params$/;"	f	class:WarehousesController

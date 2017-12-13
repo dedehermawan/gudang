@@ -18,9 +18,11 @@ Rails.application.routes.draw do
       post "page"
   end
   
-  resources :purchases
+  resources :purchases do
+    get "delete"
+  end
 
-  resources :divisions, :brands, :warehouses, :units do
+  resources :divisions, :brands, :warehouses, :units, :coas, :suppliers do
     get "delete"
   end
 

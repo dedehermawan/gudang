@@ -1,0 +1,10 @@
+<% @coas.each do |coa| %>
+  <tr>
+    <td><%= coa.coa_id %></td>
+    <td><%= coa.coa_name %></td>
+    <td class="text-center">
+      <%= link_to 'Edit', edit_coa_path(coa), remote: true, class: 'btn btn-default' %>
+      <%= link_to "Delete", coa_delete_path(coa), remote: true, class: 'btn btn-danger' %>
+    </td>
+  </tr>
+<% end %>

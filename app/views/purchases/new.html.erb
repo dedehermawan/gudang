@@ -11,14 +11,14 @@
   <% end %>
 
   <h3>Head</h3>
-  <div class="form-group col-sm-2">
+  <div class="form-group col-sm-4">
     <%= f.label "coa", class: 'control-label' %>
-    <%= f.select(:coa_id,options_for_select(@coas.collect{ |coa| [coa.coa_name, coa.id]}, [@purchase.coa_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
+    <%= f.select(:coa_id,options_for_select(@coas.collect{ |coa| [(coa.coa_name).titlecase, coa.id]}, [@purchase.coa_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
   </div>
 
-  <div class="form-group col-sm-2">
-    <%= f.label "supplier", class: 'control-label' %>
-    <%= f.select(:supplier_id,options_for_select(@coas.collect{ |coa| [coa.coa_name, coa.id]}, [@purchase.coa_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
+  <div class="form-group col-sm-3">
+    <%= f.label "division", class: 'control-label' %>
+    <%= f.select(:division_id,options_for_select(@divisions.collect{ |division| [division.division_name, division.id]}, [@purchase.division_id]), {prompt: '-- Select -- '}, {class: 'form-control'}) %>
   </div>
 
   <h2>details</h2>

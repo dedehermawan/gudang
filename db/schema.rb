@@ -36,11 +36,11 @@ ActiveRecord::Schema.define(version: 20171105051800) do
     t.string   "item_name"
     t.integer  "brand_id"
     t.integer  "unit_id"
-    t.boolean  "active",         default: true
+    t.boolean  "active"
     t.integer  "category_usage"
     t.integer  "category_item"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.index ["brand_id"], name: "index_items_on_brand_id", using: :btree
     t.index ["unit_id"], name: "index_items_on_unit_id", using: :btree
   end
